@@ -8,108 +8,119 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- Salario Bruto Anual -->
-
-    <!-- Número de Pagas -->
-
-    <!-- Edad -->
-
-    <!-- Grupo Profesional -->
-
-    <!-- Estado Civil -->
-
-    <!-- Grado de Discapacidad -->
-
-    <!-- Número de Hijos -->
-
-    <!-- Botón para Calcular Salario Neto -->
-    <EditText
-        android:id="@+id/et_numero_hijos"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginTop="32dp"
-        android:hint="Número de Hijos"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkbox_discapacidad" />
-
-    <EditText
-        android:id="@+id/et_salario_bruto"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginTop="184dp"
-        android:hint="Salario Bruto Anual"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/et_numero_pagas"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginTop="16dp"
-        android:hint="Número de Pagas"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_salario_bruto" />
-
-    <EditText
-        android:id="@+id/et_edad"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginTop="16dp"
-        android:hint="Edad"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_numero_pagas" />
-
-    <Spinner
-        android:id="@+id/spinner_grupo_profesional"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_edad" />
-
-    <Spinner
-        android:id="@+id/spinner_estado_civil"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinner_grupo_profesional" />
-
-    <CheckBox
-        android:id="@+id/checkbox_discapacidad"
+    <TextView
+        android:id="@+id/header_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="40dp"
-        android:text="Grado de Discapacidad"
+        android:text="Calculadora Salario Neto"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinner_estado_civil" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="25dp" />
+
+    <EditText
+        android:id="@+id/salary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="@string/salario_bruto_anual"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/header_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/form_input"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="25dp"/>
+
+    <EditText
+        android:id="@+id/payment_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="@string/numero_pagas"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/salary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/form_input"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="@string/edad"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/payment_num"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/form_input"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="20dp" />
+
+    <Spinner
+        android:id="@+id/profesional_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        app:layout_constraintTop_toBottomOf="@id/age"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/form_input"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="20dp" />
+
+    <Spinner
+        android:id="@+id/civil_state"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        app:layout_constraintTop_toBottomOf="@id/profesional_group"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/form_input"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="20dp" />
+
+    <CheckBox
+        android:id="@+id/has_disability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/grado_discapacidad"
+        app:layout_constraintTop_toBottomOf="@id/civil_state"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp" />
+
+    <EditText
+        android:id="@+id/children_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="@string/numero_hijos"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/has_disability"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/form_input"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="15dp" />
 
     <Button
-        android:id="@+id/btn_calcular"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="32dp"
-        android:text="Calcular Salario Neto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        android:id="@+id/btn_calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/calcular_salario_neto"
+        app:layout_constraintTop_toBottomOf="@id/children_num"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_numero_hijos" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="25dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_shape" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

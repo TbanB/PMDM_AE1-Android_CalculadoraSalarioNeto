@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.pmdm_ae1_android_calculadorasalarioneto"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.pmdm_ae1_android_calculadorasalarioneto"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 

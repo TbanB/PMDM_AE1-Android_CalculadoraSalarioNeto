@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">PMDM_AE1-Android_CalculadoraSalarioNeto</string>
+    <string name="calculadora_salario_neto">Calculadora Salario Neto</string>
+    <string name="calcular_salario_neto">Calcular Salario Neto</string>
+    <string name="grado_discapacidad">Grado de Discapacidad</string>
+    <string name="salario_bruto_anual">Salario Bruto Anual</string>
+    <string name="numero_pagas">Número de Pagas</string>
+    <string name="edad">Edad</string>
+    <string name="numero_hijos">Número de Hijos</string>
+    <string name="resultado_del_salario_neto">Resultado del Salario Neto</string>
+    <string name="volver_a_calcular">Volver a calcular</string>
+
+    <string-array name="grupos_profesionales">
+        <item>Grupo 1: Directivos y Gerentes</item>
+        <item>Grupo 2: Técnicos y Profesionales de Alto Nivel</item>
+        <item>Grupo 3: Técnicos Cualificados, Mandos Intermedios</item>
+        <item>Grupo 4: Oficiales de Primera y Segunda</item>
+        <item>Grupo 5: Auxiliares Administrativos y Personal de Apoyo</item>
+        <item>Grupo 6: Operarios Cualificados</item>
+        <item>Grupo 7: Operarios No Cualificados</item>
+        <item>Grupo 8: Aprendices</item>
+    </string-array>
+
+    <string-array name="estados_civiles">
+        <item>Soltero/a</item>
+        <item>Casado/a</item>
+        <item>Divorciado/a</item>
+        <item>Viudo/a</item>
+        <item>Separado/a</item>
+        <item>Pareja de hecho</item>
+    </string-array>
 </resources>

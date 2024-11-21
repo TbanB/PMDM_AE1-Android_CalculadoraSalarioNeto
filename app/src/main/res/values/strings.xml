@@ -9,6 +9,7 @@
     <string name="numero_hijos">Número de Hijos</string>
     <string name="resultado_del_salario_neto">Resultado del Salario Neto</string>
     <string name="volver_a_calcular">Volver a calcular</string>
+    <string name="tiene_discapacidad">¿Tiene discapacidad?</string>
 
     <string-array name="grupos_profesionales">
         <item>Grupo 1: Directivos y Gerentes</item>

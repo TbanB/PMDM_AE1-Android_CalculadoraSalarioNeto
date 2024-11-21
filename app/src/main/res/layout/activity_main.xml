@@ -91,7 +91,7 @@
         android:id="@+id/has_disability"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/grado_discapacidad"
+        android:text="@string/tiene_discapacidad"
         app:layout_constraintTop_toBottomOf="@id/civil_state"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="25dp"

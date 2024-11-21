@@ -8,27 +8,26 @@
     tools:context=".ResultActivity">
 
     <TextView
-        android:id="@+id/tv_result"
+        android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/resultado_del_salario_neto"
-        android:textSize="24sp"
+        android:textSize="25sp"
         android:textStyle="bold"
-        android:layout_margin="20dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="50dp" />
 
     <Button
         android:id="@+id/btn_return"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/volver_a_calcular"
-        app:layout_constraintTop_toBottomOf="@id/tv_result"
+        app:layout_constraintTop_toBottomOf="@id/result"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="25dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="25dp"
         android:background="@drawable/button_back_shape" />
 </androidx.constraintlayout.widget.ConstraintLayout>

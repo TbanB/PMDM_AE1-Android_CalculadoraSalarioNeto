@@ -64,9 +64,8 @@ class MainActivity : AppCompatActivity() {
 
             Toast.makeText(this, "El salario neto es: $salarioNeto", Toast.LENGTH_LONG).show()
 
-            // Crear un Intent para ir a la pantalla de ResultActivity y pasar el valor del salario neto
             val intent = Intent(this, ResultActivity::class.java)
-            intent.putExtra("SALARIO_NETO", salarioNeto)
+            intent.putExtra("SALARY_RESULT", salarioNeto)
             startActivity(intent)
         }
     }
@@ -82,27 +81,26 @@ class MainActivity : AppCompatActivity() {
     ): Double {
 
         val retencionIRPF = when (userProfGroup) {
-            1 -> userSalary * 0.22 // Grupo 1, retención más alta
+            1 -> userSalary * 0.22
             2 -> userSalary * 0.20
             3 -> userSalary * 0.18
             4 -> userSalary * 0.16
             5 -> userSalary * 0.14
             6 -> userSalary * 0.12
             7 -> userSalary * 0.10
-            8 -> userSalary * 0.08 // Grupo de aprendices, retención baja
+            8 -> userSalary * 0.08
             else -> userSalary * 0.15
         }
 
         val deduccionuserState = when (userState) {
-            2 -> 1500.0 // Casado
-            4 -> 1200.0 // Viudo
-            6 -> 1000.0 // Pareja de hecho
+            2 -> 1500.0
+            4 -> 1200.0
+            6 -> 1000.0
             else -> 0.0
         }
 
         val deducciones = (if (userHasDisability) 1000.0 else 0.0) + userChildren * 500 + deduccionuserState
 
-        // Calcular el salario neto
         return userSalary - retencionIRPF + deducciones
     }
 }
